@@ -1,53 +1,56 @@
-<!DOCTYPE html>
-<html lang="si">
-<head>
-    <meta charset="UTF-8">
-    <title>Dunhinda Pradeep - Mathematics Portfolio</title>
-    
-    <style>
-        /* CSS කොටස මෙතනට දාන්න */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #f4f4f9;
+        font-family: 'Arial', sans-serif;
+    }
 
-        .name-animation {
-            font-size: 40px;
-            font-weight: bold;
-            color: #4a4a8c;
-            text-align: center;
-            animation: dropDown 1.5s ease-out forwards;
-            margin-top: 50px;
-        }
+    .container {
+        margin-top: 100px;
+    }
 
-        .initials {
-            font-size: 80px;
-            color: #ff9900;
-            display: inline-block;
-            animation: bounceIn 1.5s ease;
-        }
+    .initials-wrapper {
+        font-size: 100px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 
-        @keyframes dropDown {
-            0% { transform: translateY(-100px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-        }
+    /* D අකුර වම් පැත්තෙන් එනවා */
+    .d-initial {
+        color: #4a4a8c;
+        animation: slideFromLeft 1s ease-out forwards;
+    }
 
-        @keyframes bounceIn {
-            0% { transform: scale(0); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-    </style>
-</head>
-<body>
+    /* P අකුර දකුණු පැත්තෙන් එනවා */
+    .p-initial {
+        color: #ff9900;
+        animation: slideFromRight 1s ease-out forwards;
+    }
 
-    <div class="name-animation">
-        <span class="initials">D</span> <span class="initials">P</span>
-        <br>
-        Dunhinda Pradeep
-    </div>
+    /* නම පස්සේ වැටෙනවා */
+    .full-name {
+        font-size: 40px;
+        color: #333;
+        margin-top: 20px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in 1s forwards; /* තත්පර 1කට පස්සේ පේනවා */
+    }
 
-</body>
-</html>
+    @keyframes slideFromLeft {
+        0% { transform: translateX(-100vw); }
+        100% { transform: translateX(0); }
+    }
+
+    @keyframes slideFromRight {
+        0% { transform: translateX(100vw); }
+        100% { transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+</style>
