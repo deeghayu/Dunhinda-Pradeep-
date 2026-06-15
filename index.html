@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>Dunhinda Pradeep - Mathematics Portfolio</title>
+    
+    <style>
+        /* CSS කොටස මෙතනට දාන්න */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .name-animation {
+            font-size: 40px;
+            font-weight: bold;
+            color: #4a4a8c;
+            text-align: center;
+            animation: dropDown 1.5s ease-out forwards;
+            margin-top: 50px;
+        }
+
+        .initials {
+            font-size: 80px;
+            color: #ff9900;
+            display: inline-block;
+            animation: bounceIn 1.5s ease;
+        }
+
+        @keyframes dropDown {
+            0% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="name-animation">
+        <span class="initials">D</span> <span class="initials">P</span>
+        <br>
+        Dunhinda Pradeep
+    </div>
+
+</body>
+</html>
