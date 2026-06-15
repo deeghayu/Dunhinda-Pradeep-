@@ -1,56 +1,44 @@
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        background-color: #f4f4f9;
-        font-family: 'Arial', sans-serif;
-    }
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>Dunhinda Pradeep - Mathematics Portfolio</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f4f9; text-align: center; }
 
-    .container {
-        margin-top: 100px;
-    }
+        /* Initials Collision Animation */
+        .intro-container { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        
+        .initials-wrapper { display: flex; font-size: 120px; font-weight: bold; overflow: hidden; }
+        .d-initial { color: #4a4a8c; animation: crashD 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        .p-initial { color: #ff9900; animation: crashP 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
 
-    .initials-wrapper {
-        font-size: 100px;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
+        .full-name { font-size: 50px; color: #333; margin-top: 10px; opacity: 0; animation: showName 0.8s ease forwards 1s; }
 
-    /* D අකුර වම් පැත්තෙන් එනවා */
-    .d-initial {
-        color: #4a4a8c;
-        animation: slideFromLeft 1s ease-out forwards;
-    }
+        /* Rest of the content */
+        .content { padding: 50px; opacity: 0; animation: fadeIn 1s ease forwards 2s; }
 
-    /* P අකුර දකුණු පැත්තෙන් එනවා */
-    .p-initial {
-        color: #ff9900;
-        animation: slideFromRight 1s ease-out forwards;
-    }
+        @keyframes crashD { 0% { transform: translateX(-100vw); } 100% { transform: translateX(0); } }
+        @keyframes crashP { 0% { transform: translateX(100vw); } 100% { transform: translateX(0); } }
+        @keyframes showName { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { to { opacity: 1; } }
+    </style>
+</head>
+<body>
 
-    /* නම පස්සේ වැටෙනවා */
-    .full-name {
-        font-size: 40px;
-        color: #333;
-        margin-top: 20px;
-        opacity: 0;
-        animation: fadeIn 1s ease-in 1s forwards; /* තත්පර 1කට පස්සේ පේනවා */
-    }
+    <div class="intro-container">
+        <div class="initials-wrapper">
+            <span class="d-initial">D</span>
+            <span class="p-initial">P</span>
+        </div>
+        <div class="full-name">Dunhinda Pradeep</div>
+    </div>
 
-    @keyframes slideFromLeft {
-        0% { transform: translateX(-100vw); }
-        100% { transform: translateX(0); }
-    }
+    <div class="content">
+        <h1>ගණිතය - විශේෂ පන්ති</h1>
+        <p>ඔබේ ගණිත ගැටලු විසඳා ගැනීමේ නිවැරදිම මාවත.</p>
+        <button onclick="alert('WhatsApp හරහා සම්බන්ධ වන්න!')">සම්බන්ධ වන්න</button>
+    </div>
 
-    @keyframes slideFromRight {
-        0% { transform: translateX(100vw); }
-        100% { transform: translateX(0); }
-    }
-
-    @keyframes fadeIn {
-        to { opacity: 1; }
-    }
-</style>
+</body>
+</html>
